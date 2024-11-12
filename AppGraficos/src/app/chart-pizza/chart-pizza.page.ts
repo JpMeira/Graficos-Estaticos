@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Chart, registerables } from 'chart.js';
-
 @Component({
   selector: 'app-chart-pizza',
   templateUrl: './chart-pizza.page.html',
@@ -13,7 +12,6 @@ export class ChartPizzaPage implements OnInit {
   produtoA: number = 300;
   produtoB: number = 50;
   produtoC: number = 100;
-
   ngOnInit() {
     // Registra os componentes necessários
     Chart.register(...registerables);

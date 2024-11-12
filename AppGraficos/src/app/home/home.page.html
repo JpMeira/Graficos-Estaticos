@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar class="header-toolbar">
-    <ion-title class="center-title">Criação de gráficos estatísticos</ion-title>
+    <ion-title class="center-title">Criação de Gráficos Estatísticos e Não Estatísticos</ion-title>
     <!-- Botão de menu com três pontinhos dentro do mesmo header -->
     <ion-buttons slot="end">
       <ion-button (click)="toggleMenu()" class="menu-button">
@@ -23,16 +23,17 @@
 
   <!-- Conteúdo do blog com a explicação sobre gráficos -->
   <div class="content">
-    <h2 class="section-title">O que é um Gráfico Estático?</h2>
-    <p>Um gráfico estático é um gráfico cujos dados são fixos e não mudam após a sua criação. Ele é gerado com base em um conjunto de dados predefinidos, e sua representação gráfica não muda com a interação do usuário. Em outras palavras, uma vez que o gráfico é gerado, ele permanece inalterado, a menos que seja recriado com novos dados.</p>
+    <h2 class="section-title">O que são Gráficos Estatísticos e Não Estatísticos?</h2>
+    <p>Gráficos estatísticos são representações visuais de dados que são fixos e não mudam após a sua criação. Eles ajudam na análise de dados de forma visual e objetiva. Já os gráficos não estatísticos são dinâmicos e podem interagir com o usuário, exibindo informações que mudam conforme o contexto ou as interações.</p>
 
     <div class="separator"></div>
 
-    <h3 class="section-title">Tipos de Gráficos Estáticos</h3>
-    <p>Existem vários tipos de gráficos estáticos, cada um com características específicas para representar diferentes tipos de dados. Abaixo, explicamos os tipos mais comuns e exemplos de quando usá-los:</p>
+    <h3 class="section-title">Gráficos Estatísticos</h3>
+    <p>Gráficos estatísticos são aqueles que apresentam dados fixos, ou seja, os dados são definidos e não mudam, mesmo após a geração do gráfico. Eles são ideais para apresentar dados históricos ou situações onde a informação não sofre variação significativa após a coleta. Exemplos incluem gráficos de barras, pizza, dispersão e áreas.</p>
 
     <div class="separator"></div>
 
+    <h4 class="section-title">Exemplos de Gráficos Estatísticos:</h4>
     <ul class="graph-list">
       <li>
         <strong>Gráfico de Barras:</strong> Usado para comparar quantidades entre diferentes categorias. As barras podem ser verticais ou horizontais.
@@ -76,34 +77,68 @@
           <li><strong>Exemplo de uso:</strong> Analisar a relação entre a altura e o peso de um grupo de pessoas.</li>
         </ul>
       </li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3 class="section-title">Gráficos Não Estatísticos</h3>
+    <p>Os gráficos não estatísticos, por outro lado, são interativos e dinâmicos. Eles podem ser atualizados ou alterados com base nas ações do usuário, permitindo uma análise mais profunda e personalizada dos dados. Exemplos comuns incluem gráficos de dispersão interativos, gráficos de linhas dinâmicos, e dashboards em tempo real.</p>
+
+    <div class="separator"></div>
+
+    <h4 class="section-title">Exemplos de Gráficos Não Estatísticos:</h4>
+    <ul class="graph-list">
+      <li>
+        <strong>Gráfico de Linhas Interativo:</strong> Permite ao usuário interagir com o gráfico, podendo alterar o intervalo de tempo, adicionar ou remover variáveis, ou até mesmo exibir o gráfico em tempo real.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Monitorar o preço de ações de empresas em tempo real, com atualizações constantes.</li>
+        </ul>
+      </li>
 
       <div class="separator"></div>
 
       <li>
-        <strong>Gráfico de Radar (ou Polar):</strong> Usado para comparar diferentes variáveis em um formato circular, onde cada "raio" representa uma variável.
+        <strong>Gráfico de Dispersão Interativo:</strong> O gráfico de dispersão não estatístico permite que o usuário mova ou selecione pontos de dados para explorar informações detalhadas sobre cada variável.
         <ul>
-          <li><strong>Exemplo de uso:</strong> Comparar o desempenho de diferentes vendedores em uma empresa, avaliando variáveis como vendas, satisfação do cliente e tempo de resposta.</li>
+          <li><strong>Exemplo de uso:</strong> Analisar a correlação entre variáveis em tempo real, com o gráfico atualizado automaticamente conforme novas informações são coletadas.</li>
+        </ul>
+      </li>
+
+      <div class="separator"></div>
+
+      <li>
+        <strong>Dashboard Interativo:</strong> Um painel de controle com gráficos dinâmicos e interativos, onde o usuário pode filtrar, selecionar e explorar dados em tempo real.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Acompanhar métricas de desempenho de uma empresa, com gráficos que se atualizam automaticamente conforme os dados são alterados.</li>
         </ul>
       </li>
     </ul>
 
     <div class="separator"></div>
 
-    <h3 class="section-title">Vantagens dos Gráficos Estáticos</h3>
+    <h3 class="section-title">Vantagens dos Gráficos Estatísticos</h3>
     <ul>
-      <li><strong>Facilidade de Compreensão:</strong> Gráficos estáticos são simples e diretos, tornando as informações mais acessíveis, especialmente para públicos não técnicos.</li>
-      <li><strong>Rápida Interpretação:</strong> A visualização de dados de forma gráfica permite uma compreensão rápida dos padrões e tendências, sem a necessidade de analisar longos relatórios numéricos.</li>
-      <li><strong>Comparações Claras:</strong> Permitem comparar diferentes categorias, períodos ou variáveis de forma visual e intuitiva.</li>
+      <li><strong>Simples e Rápidos:</strong> Gráficos estatísticos são diretos e fáceis de entender, ideais para apresentação de dados históricos ou de comparação simples.</li>
+      <li><strong>Facilidade de Interpretação:</strong> Permitem uma compreensão clara e rápida dos dados, sem a necessidade de interação constante.</li>
+      <li><strong>Aplicações Comerciais:</strong> São ótimos para análises pontuais de dados em relatórios, dashboards e apresentações.</li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3 class="section-title">Vantagens dos Gráficos Não Estatísticos</h3>
+    <ul>
+      <li><strong>Interatividade:</strong> Permitem que o usuário interaja com os dados, proporcionando uma experiência mais rica e personalizada.</li>
+      <li><strong>Atualizações em Tempo Real:</strong> Gráficos não estatísticos podem ser atualizados em tempo real, permitindo uma análise contínua e dinâmica dos dados.</li>
+      <li><strong>Insights Detalhados:</strong> Ao permitir a manipulação de dados, esses gráficos ajudam a obter insights mais profundos e específicos, de acordo com as necessidades do usuário.</li>
     </ul>
 
     <div class="separator"></div>
 
     <h3 class="section-title">Referências para Aprofundamento</h3>
-    <p>Para aprender mais sobre gráficos estáticos, visualização de dados e como criar gráficos interativos, confira os seguintes sites confiáveis:</p>
+    <p>Para aprender mais sobre gráficos estatísticos e não estatísticos, visualização de dados e como criar gráficos interativos, confira os seguintes sites confiáveis:</p>
     <ul>
       <li><a href="https://www.w3schools.com/">W3Schools</a> - Recurso educacional para aprender sobre HTML, CSS, JavaScript e gráficos.</li>
       <li><a href="https://www.chartjs.org/">Chart.js</a> - Documentação oficial para aprender a criar gráficos com a biblioteca Chart.js.</li>
-      <li><a href="https://www.datawrapper.de/">Datawrapper</a> - Ferramenta online para criar gráficos interativos de forma fácil.</li>
       <li><a href="https://www.plotly.com/">Plotly</a> - Plataforma de visualização de dados que oferece gráficos interativos e análises avançadas.</li>
       <li><a href="https://www.datavizproject.com/">Data Visualization Project</a> - Repositório com diferentes tipos de visualização de dados e exemplos de uso.</li>
     </ul>
@@ -115,7 +150,7 @@
   .section-title {
     font-size: 1.6em;
     margin-bottom: 10px;
-    color: #333;
+    color: #2C3E50;
     font-weight: bold;
   }
 
@@ -123,6 +158,7 @@
     font-family: Arial, sans-serif;
     color: #555;
     line-height: 1.6;
+    padding: 15px;
   }
 
   .separator {
