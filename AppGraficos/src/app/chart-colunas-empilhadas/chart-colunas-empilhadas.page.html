@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>ChartColunasEmpilhadas</ion-title>
+    <ion-title>Gráfico de Colunas Empilhadas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ChartColunasEmpilhadas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div>
+    <canvas id="canvas-colunas-empilhadas" style="height: 100px; width: 50%;"></canvas>
+  </div>
+  <p>Este gráfico mostra as vendas empilhadas por categoria.</p>
 </ion-content>
