@@ -1,14 +1,162 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Gráfico de Colunas Empilhadas</ion-title>
+  <ion-toolbar class="header-toolbar">
+    <ion-title class="center-title">Criação de gráficos estatísticos</ion-title>
+    <!-- Botão de menu com três pontinhos dentro do mesmo header -->
+    <ion-buttons slot="end">
+      <ion-button (click)="toggleMenu()" class="menu-button">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content class="ion-padding">
-  <ion-button expand="full" routerLink="/chart/barras">Gráfico de Barras</ion-button>
-  <ion-button expand="full" routerLink="/chart/linhas">Gráfico de Linhas</ion-button>
-  <ion-button expand="full" routerLink="/chart/pizza">Gráfico de Pizza</ion-button>
-  <ion-button expand="full" routerLink="/chart/dispersao">Gráfico de Dispersão</ion-button>
-  <ion-button expand="full" routerLink="/chart/areas">Gráfico de Áreas</ion-button>
-  <ion-button expand="full" routerLink="/chart/colunasEmpilhadas">Gráfico de Colunas Empilhadas</ion-button>
+  <!-- Menu Lateral que aparece ao clicar no botão -->
+  <div class="side-menu" *ngIf="menuVisible">
+    <ion-button expand="full" routerLink="/chart/barras">Gráfico de Barras</ion-button>
+    <ion-button expand="full" routerLink="/chart/linhas">Gráfico de Linhas</ion-button>
+    <ion-button expand="full" routerLink="/chart/pizza">Gráfico de Pizza</ion-button>
+    <ion-button expand="full" routerLink="/chart/dispersao">Gráfico de Dispersão</ion-button>
+    <ion-button expand="full" routerLink="/chart/areas">Gráfico de Áreas</ion-button>
+    <ion-button expand="full" routerLink="/chart/colunasEmpilhadas">Gráfico de Colunas Empilhadas</ion-button>
+  </div>
+
+  <!-- Conteúdo do blog com a explicação sobre gráficos -->
+  <div class="content">
+    <h2 class="section-title">O que é um Gráfico Estático?</h2>
+    <p>Um gráfico estático é um gráfico cujos dados são fixos e não mudam após a sua criação. Ele é gerado com base em um conjunto de dados predefinidos, e sua representação gráfica não muda com a interação do usuário. Em outras palavras, uma vez que o gráfico é gerado, ele permanece inalterado, a menos que seja recriado com novos dados.</p>
+
+    <div class="separator"></div>
+
+    <h3 class="section-title">Tipos de Gráficos Estáticos</h3>
+    <p>Existem vários tipos de gráficos estáticos, cada um com características específicas para representar diferentes tipos de dados. Abaixo, explicamos os tipos mais comuns e exemplos de quando usá-los:</p>
+
+    <div class="separator"></div>
+
+    <ul class="graph-list">
+      <li>
+        <strong>Gráfico de Barras:</strong> Usado para comparar quantidades entre diferentes categorias. As barras podem ser verticais ou horizontais.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Comparar as vendas de diferentes produtos ao longo do mês.</li>
+        </ul>
+      </li>
+
+      <div class="separator"></div>
+
+      <li>
+        <strong>Gráfico de Linhas:</strong> Ideal para mostrar tendências ou mudanças ao longo do tempo, conectando pontos com uma linha.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Mostrar o crescimento das ações de uma empresa ao longo de vários meses.</li>
+        </ul>
+      </li>
+
+      <div class="separator"></div>
+
+      <li>
+        <strong>Gráfico de Pizza:</strong> Utilizado para mostrar a participação percentual de diferentes partes em relação ao todo. É formado por um círculo dividido em "fatias", com cada fatia representando uma parte proporcional.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Visualizar a distribuição percentual do orçamento de uma empresa entre diferentes departamentos.</li>
+        </ul>
+      </li>
+
+      <div class="separator"></div>
+
+      <li>
+        <strong>Gráfico de Áreas:</strong> Semelhante ao gráfico de linhas, mas as áreas abaixo da linha são preenchidas com uma cor ou padrão. Ele é útil para mostrar a magnitude das mudanças ao longo do tempo.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Mostrar a evolução de um estoque de produtos ao longo de um ano.</li>
+        </ul>
+      </li>
+
+      <div class="separator"></div>
+
+      <li>
+        <strong>Gráfico de Dispersão (ou Scatter):</strong> Utilizado para mostrar a correlação entre duas variáveis contínuas, exibindo pontos no gráfico com base em valores de eixos X e Y.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Analisar a relação entre a altura e o peso de um grupo de pessoas.</li>
+        </ul>
+      </li>
+
+      <div class="separator"></div>
+
+      <li>
+        <strong>Gráfico de Radar (ou Polar):</strong> Usado para comparar diferentes variáveis em um formato circular, onde cada "raio" representa uma variável.
+        <ul>
+          <li><strong>Exemplo de uso:</strong> Comparar o desempenho de diferentes vendedores em uma empresa, avaliando variáveis como vendas, satisfação do cliente e tempo de resposta.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3 class="section-title">Vantagens dos Gráficos Estáticos</h3>
+    <ul>
+      <li><strong>Facilidade de Compreensão:</strong> Gráficos estáticos são simples e diretos, tornando as informações mais acessíveis, especialmente para públicos não técnicos.</li>
+      <li><strong>Rápida Interpretação:</strong> A visualização de dados de forma gráfica permite uma compreensão rápida dos padrões e tendências, sem a necessidade de analisar longos relatórios numéricos.</li>
+      <li><strong>Comparações Claras:</strong> Permitem comparar diferentes categorias, períodos ou variáveis de forma visual e intuitiva.</li>
+    </ul>
+
+    <div class="separator"></div>
+
+    <h3 class="section-title">Referências para Aprofundamento</h3>
+    <p>Para aprender mais sobre gráficos estáticos, visualização de dados e como criar gráficos interativos, confira os seguintes sites confiáveis:</p>
+    <ul>
+      <li><a href="https://www.w3schools.com/">W3Schools</a> - Recurso educacional para aprender sobre HTML, CSS, JavaScript e gráficos.</li>
+      <li><a href="https://www.chartjs.org/">Chart.js</a> - Documentação oficial para aprender a criar gráficos com a biblioteca Chart.js.</li>
+      <li><a href="https://www.datawrapper.de/">Datawrapper</a> - Ferramenta online para criar gráficos interativos de forma fácil.</li>
+      <li><a href="https://www.plotly.com/">Plotly</a> - Plataforma de visualização de dados que oferece gráficos interativos e análises avançadas.</li>
+      <li><a href="https://www.datavizproject.com/">Data Visualization Project</a> - Repositório com diferentes tipos de visualização de dados e exemplos de uso.</li>
+    </ul>
+  </div>
 </ion-content>
+
+<!-- Estilo adicional -->
+<style>
+  .section-title {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+
+  .content {
+    font-family: Arial, sans-serif;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .separator {
+    border-bottom: 1px solid #ddd;
+    margin: 20px 0;
+  }
+
+  .graph-list {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  .graph-list li {
+    margin-bottom: 20px;
+  }
+
+  .graph-list li strong {
+    color: #2C3E50;
+  }
+
+  .graph-list li ul {
+    padding-left: 20px;
+  }
+
+  .graph-list li ul li {
+    font-size: 0.9em;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+</style>

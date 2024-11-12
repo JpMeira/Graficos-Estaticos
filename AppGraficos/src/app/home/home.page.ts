@@ -8,6 +8,10 @@ import { Chart } from 'chart.js';
 })
 export class HomePage {
 
-  constructor() {}
+  menuVisible: boolean = false; // Controla a visibilidade do menu
 
+  // Função para alternar a visibilidade do menu
+  toggleMenu() {
+    this.menuVisible = !this.menuVisible; // Alterna o estado do menu
+  }
 }

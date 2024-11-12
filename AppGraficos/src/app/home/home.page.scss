@@ -1,3 +1,104 @@
-ion-button {
+/* SCSS no arquivo home.page.scss */
+
+/* Variáveis para cores */
+$dark-color: #333;
+$dark-secondary: #444;
+$light-color: #fff;
+$highlight-color: #2c3e50;
+$blue-color: #007bff; /* Azul para o fundo */
+$black-color: #000; /* Cor preta */
+
+/* Estilo para o header */
+.header-toolbar {
+  background-color: $blue-color; /* Cor de fundo azul para o header */
+  color: $black-color; /* Mudando a cor do texto para preto no header */
+  padding: 0 20px; /* Adiciona espaço para os lados */
+  display: flex;
+  align-items: center; /* Alinha verticalmente os itens */
+  justify-content: space-between; /* Espalha o conteúdo, título à esquerda e menu à direita */
+}
+
+/* Centralizando o título */
+.center-title {
+  text-align: center;
+  color: $black-color; /* Cor do título agora é preta */
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 20px; /* Distância do texto para a borda */
+  border-radius: 8px; /* Borda arredondada */
+}
+
+/* Estilo para o botão de menu com três pontinhos dentro do header */
+.menu-button {
+  background: none; /* Remove o fundo do botão */
+  color: $black-color; /* Cor do ícone agora é preta */
+  border: none; /* Remove a borda */
+  padding: 5px 10px; /* Padding para ajustar o tamanho do botão */
+  font-size: 22px; /* Tamanho do ícone */
+  cursor: pointer; /* Indica que é clicável */
+}
+
+/* Estilo para o ícone dentro do botão */
+.menu-button ion-icon {
+  font-size: 24px; /* Tamanho do ícone */
+  color: $black-color; /* Cor do ícone agora é preta */
+}
+
+/* Estilo para o menu lateral */
+.side-menu {
+  position: absolute; /* Posiciona o menu no canto direito */
+  top: 70px; /* Distância do topo, abaixo do título */
+  right: 20px; /* Menu do lado direito */
+  width: 250px; /* Tamanho do menu */
+  background-color: $dark-color;
+  color: $light-color;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  padding-left: 10px;
+  z-index: 999;
+  transition: 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+  /* Estilo para os botões do menu */
+  ion-button {
+    margin-bottom: 10px;
+    background-color: $dark-secondary;
+    color: $light-color;
+    border-radius: 5px;
+    text-align: left; /* Ajuste para o botão ficar mais alinhado */
+  }
+}
+
+/* Estilo geral para o conteúdo do blog */
+.content {
+  margin: 0 auto;
+  max-width: 800px; /* Limita a largura do conteúdo */
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  text-align: justify; /* Justifica o texto para uma melhor leitura */
+}
+
+/* Centraliza as imagens de código */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px 0;
+}
+
+/* Estilo para os títulos */
+h2, h3, h4 {
+  color: $highlight-color;
+  text-align: center; /* Centraliza os títulos */
+}
+
+/* Estilo para as listas */
+ul {
+  margin-top: 20px;
+}
+
+li {
   margin-bottom: 10px;
 }
