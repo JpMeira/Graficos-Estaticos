@@ -16,27 +16,27 @@ const routes: Routes = [
     loadChildren: () => import('./home-page/home-page.module').then( m => m.HomePagePageModule)
   },
   {
-    path: 'chart-barras',
+    path: 'chart/barras',
     loadChildren: () => import('./chart-barras/chart-barras.module').then( m => m.ChartBarrasPageModule)
   },
   {
-    path: 'chart-linhas',
+    path: 'chart/linhas',
     loadChildren: () => import('./chart-linhas/chart-linhas.module').then( m => m.ChartLinhasPageModule)
   },
   {
-    path: 'chart-pizza',
+    path: 'chart/pizza',
     loadChildren: () => import('./chart-pizza/chart-pizza.module').then( m => m.ChartPizzaPageModule)
   },
   {
-    path: 'chart-dispersao',
+    path: 'chart/dispersao',
     loadChildren: () => import('./chart-dispersao/chart-dispersao.module').then( m => m.ChartDispersaoPageModule)
   },
   {
-    path: 'chart-areas',
+    path: 'chart/areas',
     loadChildren: () => import('./chart-areas/chart-areas.module').then( m => m.ChartAreasPageModule)
   },
   {
-    path: 'chart-colunas-empilhadas',
+    path: 'chart/colunasEmpilhadas',
     loadChildren: () => import('./chart-colunas-empilhadas/chart-colunas-empilhadas.module').then( m => m.ChartColunasEmpilhadasPageModule)
   },
 ];
