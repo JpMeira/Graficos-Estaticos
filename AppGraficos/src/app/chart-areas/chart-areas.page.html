@@ -1,13 +1,12 @@
-<ion-header [translucent]="true">
+<ion-header>
   <ion-toolbar>
-    <ion-title>ChartAreas</ion-title>
+    <ion-title>Gráfico de Áreas</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">ChartAreas</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div>
+    <canvas id="canvas-areas"></canvas>
+  </div>
+  <p>Este gráfico mostra as vendas acumuladas ao longo do tempo.</p>
 </ion-content>
