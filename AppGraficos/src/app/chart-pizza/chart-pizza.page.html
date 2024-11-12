@@ -5,9 +5,30 @@
 </ion-header>
 
 <ion-content class="ion-padding">
+  <!-- Formulário para alimentar dados -->
+  <form (ngSubmit)="updateChart()">
+    <ion-item>
+      <ion-label position="floating">Produto A</ion-label>
+      <ion-input [(ngModel)]="produtoA" name="produtoA" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Produto B</ion-label>
+      <ion-input [(ngModel)]="produtoB" name="produtoB" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Produto C</ion-label>
+      <ion-input [(ngModel)]="produtoC" name="produtoC" type="number" required></ion-input>
+    </ion-item>
+
+    <ion-button expand="full" type="submit">Atualizar Gráfico</ion-button>
+  </form>
+
+  <!-- Gráfico de Pizza -->
   <div>
-    <!-- Tamanho fixo para o gráfico -->
-    <canvas id="canvas-pizza" style="height: 100px; width: 50%;"></canvas>
+    <canvas id="canvas-pizza" style="height: 300px; width: 100%;"></canvas>
   </div>
+
   <p>Este gráfico mostra a distribuição de vendas por produto.</p>
 </ion-content>
